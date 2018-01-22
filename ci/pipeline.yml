@@ -92,6 +92,19 @@ jobs:
     trigger: true
   - get: allocations-artifacts
     trigger: false
+  - task: migrate database
+    file: pal-tracker/ci/migrateDatabase.yml
+    params:
+      CF_API_URL: {{cf-api-url}}
+      CF_USERNAME: {{cf-username}}
+      CF_PASSWORD: {{cf-password}}
+      CF_ORG: {{cf-org}}
+      CF_SPACE: sandbox
+      MYSQL_IP: {{mysql-ip}}
+      DATABASE_NAME: {{allocations-database-name}}
+      DATABASE_USERNAME: {{allocations-database-username}}
+      DATABASE_PASSWORD: {{allocations-database-password}}
+      APP_NAME: allocations
   - put: cf
     params:
       manifest: pal-tracker/manifest-allocations.yml
