@@ -105,6 +105,7 @@ jobs:
       DATABASE_USERNAME: {{allocations-database-username}}
       DATABASE_PASSWORD: {{allocations-database-password}}
       APP_NAME: tracker-allocations
+      MIGRATION_DIR: allocations-database
   - put: cf
     params:
       manifest: pal-tracker/manifest-allocations.yml
