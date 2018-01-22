@@ -5,7 +5,8 @@ resources:
   source:
     uri: {{github-repository}}
     branch: my-work
-    private_key: {{github-private-key}}
+    username: {{github-username}}
+    password: {{github-password}}
 
 - name: version
   type: semver
