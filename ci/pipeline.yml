@@ -131,7 +131,7 @@ jobs:
       DATABASE_NAME: {{backlog-database-name}}
       DATABASE_USERNAME: {{backlog-database-username}}
       DATABASE_PASSWORD: {{backlog-database-password}}
-      APP_NAME: backlog-allocations
+      APP_NAME: tracker-backlog
       MIGRATION_DIR: backlog-database
   - put: cf
     params:
@@ -158,7 +158,7 @@ jobs:
       DATABASE_NAME: {{registration-database-name}}
       DATABASE_USERNAME: {{registration-database-username}}
       DATABASE_PASSWORD: {{registration-database-password}}
-      APP_NAME: registration-allocations
+      APP_NAME: tracker-registration
       MIGRATION_DIR: registration-database
   - put: cf
     params:
@@ -185,7 +185,7 @@ jobs:
       DATABASE_NAME: {{timesheets-database-name}}
       DATABASE_USERNAME: {{timesheets-database-username}}
       DATABASE_PASSWORD: {{timesheets-database-password}}
-      APP_NAME: timesheets-allocations
+      APP_NAME: tracker-timesheets
       MIGRATION_DIR: timesheets-database
   - put: cf
     params:
